@@ -33,6 +33,6 @@
 - Ao selecionar uma opção de realizar compra e escolher uma opção inválida, poderia retornar a mensagem de opção inválida.
 - Tratar o retorno de valores do tipo double para duas casas decimais.
 
-## Bugs
+### Bugs
 
 - Ocorre um erro ao digitar opções incorretas, por exemplo, quando o usuário deve digitar um número, mas insere um caractere, o sistema para de funcionar.
