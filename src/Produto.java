@@ -1,3 +1,4 @@
+import java.util.Objects;
 
 public class Produto {
 	private Integer id;
@@ -6,7 +7,7 @@ public class Produto {
 	private Double preco;
 	private Empresa empresa;
 
-	public Produto(Integer id,String nome, Integer quantidade, Double preco, Empresa empresa) {
+	public Produto(Integer id, String nome, Integer quantidade, Double preco, Empresa empresa) {
 		super();
 		this.id = id;
 		this.nome = nome;
@@ -19,8 +20,6 @@ public class Produto {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	
-	
 
 	public Integer getId() {
 		return id;
@@ -60,6 +59,23 @@ public class Produto {
 
 	public void setPreco(Double preco) {
 		this.preco = preco;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Produto other = (Produto) obj;
+		return Objects.equals(id, other.id);
 	}
 
 }
